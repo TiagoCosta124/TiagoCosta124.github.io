@@ -24,6 +24,19 @@ header h1 {
   font-size: 28px;
 }
 
+header nav a {
+    background-color: white;
+    color: #1b2952;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background-color: #c6d4ff;
+}
+
+
 /* Conteúdo principal */
 main {
   background-color: white;

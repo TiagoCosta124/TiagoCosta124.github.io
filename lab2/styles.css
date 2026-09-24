@@ -32,7 +32,7 @@ main {
   border-radius: 12px;
 }
 
-/* Tecnologias */
+/* Lista de tecnologias */
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +40,7 @@ main {
   margin: 0;
 }
 
+/* Cartões das tecnologias */
 .tecnologias li {
   display: flex;
   justify-content: center;
@@ -54,6 +55,7 @@ main {
   text-align: center;
 }
 
+/* Efeito dos cartões */
 .tecnologias li:hover {
   background-color: #dce6ff;
 }
@@ -75,11 +77,12 @@ main nav a {
   text-decoration: underline;
 }
 
-/* Efeitos hover */
+/* Efeito do link do Moodle */
 main a:hover {
   background-color: #3453a0;
 }
 
+/* Efeito dos links dos laboratórios */
 main nav a:hover {
   background-color: transparent;
   color: #3453a0;

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimédia - Barreiro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Fotografias */
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .fotografias img {
+        width: 120px;
+        height: 80px;
+        border-radius: 20px;
+      }
+
+      /* Poesia */
+      .poema {
+        background-color: #eaf2ff;
+        border-radius: 15px;
+        padding: 20px;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .poema p {
+        margin: 12px;
+      }
+
+      .poema p:nth-child(odd) {
+        color: #1b2952;
+        font-weight: bold;
+      }
+
+      .poema p:nth-child(even) {
+        color: #3453a0;
+        font-style: italic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Barreiro</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informação</a>
+    </nav>
+    <img
+      class="capa"
+      src="images/avenida.jpg"
+      alt="Vista da cidade do Barreiro"
+    />
+
+    <main>
+      <h2>Multimédia</h2>
+
+      <p>Nesta página encontra conteúdos multimédia.</p>
+
+      <!-- Âncoras -->
+      <p>
+        <a href="#fotografias">Fotografias</a>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poema</a>
+      </p>
+
+      <!-- Secção Fotografias -->
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+
+        <div class="fotografias">
+          <img src="images/moinhos.jpg" alt="Moinhos de Alburrica" />
+          <img src="images/praia.jpg" alt="Praia de Alburrica" />
+          <img src="images/parque.jpg" alt="Parque da Cidade" />
+          <img src="images/avenida.jpg" alt="Avenida da Praia" />
+          <img src="images/terminal.jpg" alt="Terminal fluvial" />
+          <img src="images/industria.jpg" alt="Património industrial" />
+          <img src="images/fabril.jpg" alt="Emblema do GD Fabril" />
+          <img src="images/barreirense.jpg" alt="Emblema do FC Barreirense" />
+        </div>
+
+        <h4>A rivalidade Fabril-Barreirense</h4>
+
+        <p>
+          O GD Fabril e o FC Barreirense são dois clubes históricos do Barreiro.
+          A rivalidade futebolística entre os dois faz parte da tradição
+          desportiva da cidade.
+        </p>
+      </section>
+
+      <!-- Secção Vídeo -->
+      <section>
+        <h3 id="video">Vídeo</h3>
+
+        <!-- Substituir ID_DO_VIDEO pelo ID do vídeo escolhido -->
+        <iframe
+          width="400"
+          height="225"
+          src="https://www.youtube.com/embed/ID_DO_VIDEO"
+          title="Vídeo sobre o Barreiro"
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <!-- Secção Poesia -->
+      <section>
+        <h3 id="poema">Poesia</h3>
+
+        <div class="poema">
+          <p>No Barreiro nasce o dia,</p>
+          <p>Com o Tejo a espelhar a luz.</p>
+          <p>Alburrica guarda o vento,</p>
+          <p>Cada moinho o tempo conduz.</p>
+          <p>Entre fábricas e caminhos,</p>
+          <p>Há histórias para contar.</p>
+          <p>Fabril e Barreirense em campo,</p>
+          <p>Fazem a cidade vibrar.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>

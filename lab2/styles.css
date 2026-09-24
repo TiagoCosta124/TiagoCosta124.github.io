@@ -1,104 +1,63 @@
-/* Fundo da página */
-html {
-  background-color: #111;
-}
 
+/* Fundo da página */
 body {
-  background-color: #eaf2ff;
+  background-color: #f2f2f2;
   font-family: Arial, sans-serif;
-  max-width: 750px;
+  max-width: 1000px;
   margin: 20px auto;
-  border-radius: 16px;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #1b2952;
-  color: white;
+  background-color: #43a047;
+  color: #fff;
   text-align: center;
-  padding: 25px;
-  border-radius: 16px 16px 0 0;
+  padding: 20px;
 }
 
 header h1 {
-  font-size: 28px;
+  margin: 10px;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: #222;
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* Efeito ao passar o rato */
+nav a:hover {
+  color: #90ee90;
+}
+
+/* Imagem da cidade */
+.capa {
+  display: block;
+  width: 100%;
 }
 
 /* Conteúdo principal */
 main {
-  background-color: white;
-  margin: 20px;
-  padding: 16px;
-  border-radius: 12px;
-}
-
-/* Lista de tecnologias */
-.tecnologias {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-
-/* Cartões das tecnologias */
-.tecnologias li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 40%;
-  background-color: #f5f8ff;
-  color: #1b2952;
-  border: 1px solid #c6d4ff;
-  border-radius: 9px;
-  padding: 15px;
-  margin: 5px;
-  text-align: center;
-}
-
-/* Efeito dos cartões */
-.tecnologias li:hover {
-  background-color: #dce6ff;
-}
-
-/* Link do Moodle */
-main a {
-  background-color: #1b2952;
-  color: white;
-  padding: 5px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-/* Links dos laboratórios */
-main nav a {
-  background-color: transparent;
-  color: #1b2952;
-  padding: 0;
-  text-decoration: underline;
-}
-
-/* Efeito do link do Moodle */
-main a:hover {
-  background-color: #3453a0;
-}
-
-/* Efeito dos links dos laboratórios */
-main nav a:hover {
-  background-color: transparent;
-  color: #3453a0;
-}
-
-/* Imagem */
-img {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  margin: 20px auto;
+  background-color: #fff;
+  padding: 25px;
+  margin: 15px 0;
 }
 
 /* Rodapé */
 footer {
-  color: #1b2952;
+  background-color: #222;
+  color: #fff;
   text-align: center;
   padding: 15px;
+}
+
+footer p {
+  margin: 0;
 }

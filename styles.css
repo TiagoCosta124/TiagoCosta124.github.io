@@ -12,20 +12,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Todas as secções ocupam a altura do ecrã */
 section {
   height: 100vh;
 }
 
-/* HERO */
-
 .hero {
   position: relative;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
     url("lab3/images/avniparia.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   color: #fff;
 }
 
@@ -36,20 +33,50 @@ nav {
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 nav a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+
+.texto-disciplina a {
+  color: #1b5cff;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background-color: #1b5cff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card {
+  width: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ff9fb3;
+  color: #222;
+  text-decoration: none;
 }
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.botao:hover {
+  background-color: #1748c7;
+}
+
+.card:hover {
+  background-color: #ff859f;
 }
 
 .hero-conteudo {
@@ -60,14 +87,14 @@ nav a:hover {
 }
 
 .hero-pequeno {
+  margin-bottom: 15px;
   font-size: 12px;
   letter-spacing: 3px;
-  margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: 48px;
   margin-bottom: 20px;
+  font-size: 48px;
 }
 
 .hero-conteudo > p {
@@ -75,26 +102,11 @@ nav a:hover {
   line-height: 1.5;
 }
 
-.botao {
-  display: inline-block;
-  background-color: #1b5cff;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 8px;
-}
-
-.botao:hover {
-  background-color: #1748c7;
-}
-
-/* PROJETOS */
-
 .projetos {
-  background-color: #ffd1bf;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffd1bf;
 }
 
 .secao-conteudo {
@@ -102,8 +114,8 @@ nav a:hover {
 }
 
 .secao-conteudo h2 {
-  font-size: 36px;
   margin-bottom: 10px;
+  font-size: 36px;
 }
 
 .secao-conteudo > p {
@@ -113,42 +125,27 @@ nav a:hover {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-}
-
-.card {
-  background-color: #ff9fb3;
-  color: #222;
-  text-decoration: none;
-  width: 250px;
-  padding: 25px;
-  border-radius: 10px;
+  justify-content: center;
 }
 
 .card h3 {
   margin-bottom: 10px;
 }
 
-.card:hover {
-  background-color: #ff859f;
-}
-
-/* DISCIPLINA */
-
 .cadeira {
-  background-color: #eaf2ff;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #eaf2ff;
 }
 
 .disciplina {
-  width: 80%;
   display: flex;
+  gap: 40px;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  width: 80%;
 }
 
 .texto-disciplina {
@@ -156,8 +153,8 @@ nav a:hover {
 }
 
 .texto-disciplina h2 {
-  font-size: 36px;
   margin-bottom: 25px;
+  font-size: 36px;
 }
 
 .texto-disciplina p {
@@ -169,13 +166,9 @@ nav a:hover {
   margin: 0 0 20px 30px;
 }
 
-.texto-disciplina a {
-  color: #1b5cff;
-}
-
 .imagem-disciplina {
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: center;
 }
 
@@ -184,9 +177,7 @@ nav a:hover {
   max-width: 100%;
 }
 
-/* TELEMÓVEL */
-
-@media (max-width: 600px) {
+@media (width <= 600px) {
   section {
     height: auto;
     min-height: 100vh;
@@ -204,8 +195,8 @@ nav a:hover {
 
   .hero-conteudo {
     top: 35%;
-    left: 8%;
     right: 8%;
+    left: 8%;
   }
 
   .hero h1 {

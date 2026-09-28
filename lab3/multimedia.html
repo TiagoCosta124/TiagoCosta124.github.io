@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimédia - Barreiro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Barreiro</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informação</a>
+    </nav>
+
+    <main class="multimedia">
+      <div class="introducao-multimedia">
+        <h2>Multimédia</h2>
+
+        <p>Nesta página encontra conteúdos multimédia.</p>
+
+        <p class="ancoras">
+          <a href="#fotografias">Fotografias</a>
+          <a href="#video">Vídeo</a>
+          <a href="#poema">Poema</a>
+        </p>
+      </div>
+
+      <!-- FOTOGRAFIAS -->
+      <section id="fotografias" class="multimedia-secao fotografias-secao">
+        <h3>Fotografias</h3>
+
+        <div class="fotografias">
+          <img src="images/moinhos.jpg" alt="Moinhos de Alburrica" />
+          <img src="images/praia.jpg" alt="Praia de Alburrica" />
+          <img src="images/pqdacidade.jpg" alt="Parque da Cidade" />
+          <img src="images/avniparia.jpg" alt="Avenida da Praia" />
+          <img src="images/terminal.jpg" alt="Terminal fluvial" />
+          <img src="images/patri.jpg" alt="Património industrial" />
+          <img src="images/fabril.jpg" alt="Emblema do GD Fabril" />
+          <img src="images/barreirense.jpg" alt="Emblema do FC Barreirense" />
+        </div>
+
+        <h4>A rivalidade Fabril-Barreirense</h4>
+
+        <p>
+          O GD Fabril e o FC Barreirense são dois clubes históricos do Barreiro.
+          A rivalidade futebolística entre os dois faz parte da tradição
+          desportiva da cidade.
+        </p>
+      </section>
+
+      <!-- FOTOGRAFIA DE DESTAQUE -->
+      <section class="foto-destaque">
+        <img
+          src="images/avniparia.jpg"
+          alt="Vista do Barreiro junto ao rio Tejo"
+        />
+
+        <p class="frase-destaque">
+          Barreiro, uma cidade entre o Tejo, a indústria e a história.
+        </p>
+      </section>
+
+      <!-- VÍDEO YOUTUBE -->
+      <section id="video" class="multimedia-secao video-secao">
+        <h3>Vídeo</h3>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/AfNKbzpAgK0?rel=0"
+          title="Vídeo sobre o Barreiro"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <!-- POESIA -->
+      <section id="poema" class="multimedia-secao poema-secao">
+        <h3>Poesia</h3>
+
+        <div class="poema">
+          <p>No Barreiro nasce o dia,</p>
+          <p>Com o Tejo a espelhar a luz.</p>
+          <p>Alburrica guarda o vento,</p>
+          <p>Cada moinho o tempo conduz.</p>
+          <p>Entre fábricas e caminhos,</p>
+          <p>Há histórias para contar.</p>
+          <p>Fabril e Barreirense em campo,</p>
+          <p>Fazem a cidade vibrar.</p>
+        </div>
+      </section>
+
+      <!-- VÍDEO BACKGROUND -->
+      <section class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="videos/fundo.mp4" type="video/mp4" />
+        </video>
+
+        <div class="conteudo-video-background">
+          <h2>Descobre o Barreiro</h2>
+          <p>Uma cidade entre o Tejo, a história e a tradição.</p>
+        </div>
+      </section>
+
+      <!-- PARALLAX -->
+      <section class="parallax">
+        <div class="conteudo-parallax">
+          <h2>Barreiro junto ao Tejo</h2>
+          <p>Uma cidade com identidade, história e ligação ao rio.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>

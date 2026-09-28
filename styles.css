@@ -1,104 +1,232 @@
-/* Fundo da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  background-color: #111;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #eaf2ff;
   font-family: Arial, sans-serif;
-  max-width: 750px;
-  margin: 20px auto;
-  border-radius: 16px;
 }
 
-/* Cabeçalho */
-header {
-  background-color: #1b2952;
+/* Todas as secções ocupam a altura do ecrã */
+section {
+  height: 100vh;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("lab3/images/avniparia.jpg");
+  background-size: cover;
+  background-position: center;
   color: #fff;
-  text-align: center;
-  padding: 25px;
-  border-radius: 16px 16px 0 0;
 }
 
-header h1 {
-  font-size: 28px;
-}
-
-/* Conteúdo principal */
-main {
-  background-color: #fff;
-  margin: 20px;
-  padding: 16px;
-  border-radius: 12px;
-}
-
-/* Lista de tecnologias */
-.tecnologias {
+nav {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 25px 50px;
+}
+
+nav ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-}
-
-/* Cartões das tecnologias */
-.tecnologias li {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 40%;
-  background-color: #f5f8ff;
-  color: #1b2952;
-  border: 1px solid #c6d4ff;
-  border-radius: 9px;
-  padding: 15px;
-  margin: 5px;
-  text-align: center;
+  gap: 1rem;
 }
 
-/* Efeito dos cartões */
-.tecnologias li:hover {
-  background-color: #dce6ff;
+nav a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Links dos laboratórios */
-main nav a {
-  background-color: transparent;
-  color: #1b2952;
-  padding: 0;
+nav a:hover {
   text-decoration: underline;
 }
 
-/* Botão do Moodle */
-main > p > a {
-  background-color: #1b2952;
+.hero-conteudo {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  max-width: 550px;
+}
+
+.hero-pequeno {
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-conteudo > p {
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #1b5cff;
   color: #fff;
-  padding: 5px;
-  border-radius: 8px;
   text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
 }
 
-/* Efeito dos links dos laboratórios */
-main nav a:hover {
-  background-color: transparent;
-  color: #3453a0;
+.botao:hover {
+  background-color: #1748c7;
 }
 
-/* Efeito do botão do Moodle */
-main > p > a:hover {
-  background-color: #3453a0;
+/* PROJETOS */
+
+.projetos {
+  background-color: #ffd1bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Imagem */
-img {
-  display: block;
-  width: 300px;
+.secao-conteudo {
+  width: 80%;
+}
+
+.secao-conteudo h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.secao-conteudo > p {
+  margin-bottom: 35px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ff9fb3;
+  color: #222;
+  text-decoration: none;
+  width: 250px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  background-color: #ff859f;
+}
+
+/* DISCIPLINA */
+
+.cadeira {
+  background-color: #eaf2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disciplina {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.texto-disciplina {
+  flex: 1;
+}
+
+.texto-disciplina h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.texto-disciplina p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.texto-disciplina ul {
+  margin: 0 0 20px 30px;
+}
+
+.texto-disciplina a {
+  color: #1b5cff;
+}
+
+.imagem-disciplina {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-disciplina img {
+  width: 350px;
   max-width: 100%;
-  margin: 20px auto;
 }
 
-/* Rodapé */
-footer {
-  color: #1b2952;
-  text-align: center;
-  padding: 15px;
+/* TELEMÓVEL */
+
+@media (max-width: 600px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  nav {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-conteudo {
+    top: 35%;
+    left: 8%;
+    right: 8%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .disciplina {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .texto-disciplina h2 {
+    font-size: 30px;
+  }
+
+  .imagem-disciplina img {
+    width: 250px;
+  }
 }

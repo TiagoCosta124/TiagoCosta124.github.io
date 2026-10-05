@@ -221,3 +221,40 @@ nav a:hover {
     width: 250px;
   }
 }
+.pagina-tutoriais {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.pagina-tutoriais h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pagina-tutoriais section {
+  margin-bottom: 50px;
+}
+
+.pagina-tutoriais h2 {
+  margin-bottom: 20px;
+}
+
+.codepens {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.codepens article {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.codepens article h3 {
+  margin-bottom: 15px;
+}
+
+.videotutoriais {
+  padding: 20px;
+}

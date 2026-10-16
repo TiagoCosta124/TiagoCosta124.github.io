@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 - Eventos JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="titulo">Laboratório de Eventos</h1>
+      <p>Experimenta os diferentes eventos de rato.</p>
+    </header>
+
+    <main>
+      <section class="contador">
+        <h2>Contador</h2>
+
+        <p>
+          Número de cliques:
+          <strong id="contador">0</strong>
+        </p>
+
+        <button type="button" onclick="incrementarContador()">
+          Clique aqui
+        </button>
+      </section>
+
+      <section class="eventos">
+        <h2>Eventos</h2>
+
+        <button type="button" ondblclick="duploClique()">
+          Faz duplo clique
+        </button>
+
+        <p id="mensagem">Passa o rato pela imagem.</p>
+
+        <img
+          id="fotografia"
+          src="images/fotografia.jpg"
+          alt="Fotografia de demonstração"
+          onmouseover="ratoEntrou()"
+          onmouseout="ratoSaiu()"
+        />
+      </section>
+
+      <section id="zona-rato" class="zona-rato" onmousemove="moverRato(event)">
+        <h2>Movimento do rato</h2>
+        <p id="coordenadas">Move o rato dentro desta área.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026 - Lab 4</p>
+    </footer>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>

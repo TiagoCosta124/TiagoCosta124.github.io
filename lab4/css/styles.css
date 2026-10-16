@@ -4,12 +4,12 @@
 
 body {
   margin: 0;
-  background-color: #eeeeee;
+  background-color: #eee;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-color: #222222;
+  background-color: #222;
   color: white;
   padding: 30px;
   text-align: center;
@@ -29,7 +29,7 @@ section {
 }
 
 button {
-  background-color: #222222;
+  background-color: #222;
   color: white;
   padding: 10px 20px;
   border: 0;
@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #555555;
+  background-color: #555;
 }
 
 #contador {
@@ -55,11 +55,11 @@ button:hover {
 
 .zona-rato {
   min-height: 180px;
-  border: 3px solid #222222;
+  border: 3px solid #222;
 }
 
 footer {
-  background-color: #222222;
+  background-color: #222;
   color: white;
   padding: 15px;
   text-align: center;

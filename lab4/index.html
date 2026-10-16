@@ -22,17 +22,13 @@
           <strong id="contador">0</strong>
         </p>
 
-        <button type="button" onclick="incrementarContador()">
-          Clique aqui
-        </button>
+        <button id="botao-contador" type="button">Clique aqui</button>
       </section>
 
       <section class="eventos">
         <h2>Eventos</h2>
 
-        <button type="button" ondblclick="duploClique()">
-          Faz duplo clique
-        </button>
+        <button id="botao-duplo" type="button">Faz duplo clique</button>
 
         <p id="mensagem">Passa o rato pela imagem.</p>
 
@@ -40,13 +36,12 @@
           id="fotografia"
           src="images/fotografia.jpg"
           alt="Fotografia de demonstração"
-          onmouseover="ratoEntrou()"
-          onmouseout="ratoSaiu()"
         />
       </section>
 
-      <section id="zona-rato" class="zona-rato" onmousemove="moverRato(event)">
+      <section id="zona-rato" class="zona-rato">
         <h2>Movimento do rato</h2>
+
         <p id="coordenadas">Move o rato dentro desta área.</p>
       </section>
     </main>

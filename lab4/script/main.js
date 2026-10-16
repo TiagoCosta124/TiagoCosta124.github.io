@@ -7,38 +7,29 @@ const fotografia = document.querySelector("#fotografia");
 const coordenadas = document.querySelector("#coordenadas");
 const zonaRato = document.querySelector("#zona-rato");
 
+const botaoContador = document.querySelector("#botao-contador");
+const botaoDuplo = document.querySelector("#botao-duplo");
+
 function incrementarContador() {
   contador++;
-
   textoContador.textContent = contador;
-
-  console.log("Contador:", contador);
 }
 
 function duploClique() {
   titulo.textContent = "Fizeste duplo clique!";
-
   titulo.style.color = "yellow";
-
-  console.log("Evento dblclick executado");
 }
 
 function ratoEntrou() {
   mensagem.textContent = "O rato entrou na imagem!";
-
   fotografia.style.transform = "scale(1.05)";
   fotografia.style.border = "5px solid green";
-
-  console.log("Evento mouseover executado");
 }
 
 function ratoSaiu() {
   mensagem.textContent = "O rato saiu da imagem.";
-
   fotografia.style.transform = "scale(1)";
   fotografia.style.border = "none";
-
-  console.log("Evento mouseout executado");
 }
 
 function moverRato(event) {
@@ -48,5 +39,11 @@ function moverRato(event) {
     " | Y = " +
     event.offsetY;
 
-  zonaRato.style.backgroundColor = "#dddddd";
+  zonaRato.style.backgroundColor = "#ddd";
 }
+
+botaoContador.addEventListener("click", incrementarContador);
+botaoDuplo.addEventListener("dblclick", duploClique);
+fotografia.addEventListener("mouseover", ratoEntrou);
+fotografia.addEventListener("mouseout", ratoSaiu);
+zonaRato.addEventListener("mousemove", moverRato);

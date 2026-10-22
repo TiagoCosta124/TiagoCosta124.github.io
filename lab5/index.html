@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 5 - JavaScript</title>
+    <title>Lab 5 - JavaScript Parte 2</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <main>
+      <h1>Lab 5 - Eventos 2.0</h1>
+
       <section>
         <h2>1. <span id="passar">Passa por aqui!</span></h2>
       </section>
@@ -16,32 +18,88 @@
       <section>
         <h2>2. <span id="pinta">Pinta-me!</span></h2>
 
-        <button type="button" data-color="red">Red</button>
-        <button type="button" data-color="green">Green</button>
-        <button type="button" data-color="blue">Blue</button>
+        <button class="color" type="button" data-color="red">Red</button>
+
+        <button class="color" type="button" data-color="green">Green</button>
+
+        <button class="color" type="button" data-color="blue">Blue</button>
       </section>
 
       <section>
         <h2>3. Experimenta escrever...</h2>
 
+        <label for="escrever">Escreve:</label>
         <input id="escrever" type="text" />
       </section>
 
       <section>
-        <h2>4. Escolha uma cor em inglês:</h2>
+        <h2>4. Escolha uma cor:</h2>
 
-        <form id="form-cor">
-          <input id="cor" type="text" />
+        <label for="cor-pagina">Cor de fundo:</label>
+
+        <select id="cor-pagina">
+          <option value="white">White</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+        </select>
+      </section>
+
+      <section>
+        <h2>5. Contador com Local Storage</h2>
+
+        <p id="contador">0</p>
+
+        <button id="incrementar" type="button">Incrementar</button>
+        <button id="decrementar" type="button">Decrementar</button>
+        <button id="reset" type="button">Reset</button>
+      </section>
+
+      <section>
+        <h2>6. Formulário</h2>
+
+        <form id="form-utilizador">
+          <label for="nome">Nome:</label>
+          <input
+            id="nome"
+            type="text"
+            placeholder="Insira o seu nome"
+            required
+          />
+
+          <label for="idade">Idade:</label>
+          <input id="idade" type="number" placeholder="Idade" required />
+
           <button type="submit">Submeter</button>
         </form>
+
+        <p id="frase"></p>
       </section>
 
       <section>
         <h2>
-          5.
-          <button id="contar" type="button">Conta!</button>
-          <span id="contador">0</span>
+          7. Automatic Counter:
+          <span id="automatico">0</span>
         </h2>
+      </section>
+
+      <section>
+        <h2>Select Flex</h2>
+
+        <label for="direcao">Direção:</label>
+
+        <select id="direcao">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">line</option>
+          <option value="column-reverse">line-reverse</option>
+        </select>
+
+        <section id="bolas">
+          <span class="bola vermelha"></span>
+          <span class="bola verde"></span>
+          <span class="bola azul"></span>
+          <span class="bola amarela"></span>
+        </section>
       </section>
     </main>
 

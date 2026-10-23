@@ -13,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgb(232, 48, 48);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 
@@ -54,7 +54,7 @@ section h2 {
 
 #cesto {
   padding: 30px;
-  background-color: rgb(232, 48, 48);
+  background-color: rgb(255, 0, 0);
 color: white;
 }
 

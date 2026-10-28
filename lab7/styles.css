@@ -13,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgb(255, 0, 0);
+  background-color: purple;
   color: white;
 }
 
@@ -50,15 +50,35 @@ section h2 {
   gap: 25px;
 }
 
+article {
+  width: 280px;
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 8px;
+}
 
+article img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+article button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
 
 #cesto {
   padding: 30px;
-  background-color: rgb(255, 0, 0);
-color: white;
+  background-color: purple;
+  color: white;
 }
 
-
+#cesto article {
+  background-color: white;
+  color: black;
+}
 
 footer {
   padding: 15px;

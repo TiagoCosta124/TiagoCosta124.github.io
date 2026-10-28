@@ -16,7 +16,13 @@ const chaveCesto = "produtos-selecionados";
 // B. Funções utilitárias
 
 function obterCesto() {
-  return JSON.parse(localStorage.getItem(chaveCesto)) || [];
+  const dados = localStorage.getItem(chaveCesto);
+
+  if (dados === null) {
+    return [];
+  }
+
+  return JSON.parse(dados);
 }
 
 function guardarCesto(cesto) {
@@ -37,10 +43,19 @@ function criarProduto(produto) {
   imagem.alt = produto.title;
 
   const preco = document.createElement("p");
-  preco.textContent = "Custo total: " + produto.price + " €";
+  preco.textContent =
+    "Custo total: " + produto.price + " €";
+
+  const categoria = document.createElement("p");
+  categoria.textContent =
+    "Categoria: " + produto.category;
 
   const descricao = document.createElement("p");
   descricao.textContent = produto.description;
+
+  const avaliacao = document.createElement("p");
+  avaliacao.textContent =
+    "Avaliação: " + produto.rating.rate;
 
   const botao = document.createElement("button");
   botao.type = "button";
@@ -60,7 +75,9 @@ function criarProduto(produto) {
     titulo,
     imagem,
     preco,
+    categoria,
     descricao,
+    avaliacao,
     botao,
   );
 
@@ -78,7 +95,8 @@ function criarProdutoCesto(produto, indice) {
   imagem.alt = produto.title;
 
   const preco = document.createElement("p");
-  preco.textContent = "Custo total: " + produto.price + " €";
+  preco.textContent =
+    "Custo total: " + produto.price + " €";
 
   const botao = document.createElement("button");
   botao.type = "button";
@@ -141,13 +159,13 @@ function atualizaCesto() {
 
 // D. Event Listeners
 
-// Os eventos dos botões são associados
-// quando os produtos são criados.
+// Os event listeners dos botões são criados
+// dentro de criarProduto() e criarProdutoCesto().
 
 
 // E. Inicialização
 
-if (!localStorage.getItem(chaveCesto)) {
+if (localStorage.getItem(chaveCesto) === null) {
   guardarCesto([]);
 }
 

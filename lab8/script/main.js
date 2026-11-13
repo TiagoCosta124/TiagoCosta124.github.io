@@ -13,7 +13,8 @@ const nodeCesto = document.querySelector(
   "#cesto .lista-cesto",
 );
 
-const nodeTotal = document.querySelector("#total");
+const nodeTotal =
+  document.querySelector("#total");
 
 const nodeFiltro =
   document.querySelector("#filtro");
@@ -39,7 +40,8 @@ const nodeReferencia =
 const nodeTotalCompra =
   document.querySelector("#total-compra");
 
-const chaveCesto = "produtos-selecionados";
+const chaveCesto =
+  "produtos-selecionados";
 
 
 // B. Funções utilitárias
@@ -48,6 +50,7 @@ const chaveCesto = "produtos-selecionados";
 // LOCAL STORAGE
 
 function obterCesto() {
+
   const dados =
     localStorage.getItem(chaveCesto);
 
@@ -60,6 +63,7 @@ function obterCesto() {
 
 
 function guardarCesto(cesto) {
+
   localStorage.setItem(
     chaveCesto,
     JSON.stringify(cesto),
@@ -67,9 +71,10 @@ function guardarCesto(cesto) {
 }
 
 
-// CRIAR PRODUTO
+// CRIAR PRODUTO DA LOJA
 
 function criarProduto(produto) {
+
   const article =
     document.createElement("article");
 
@@ -93,11 +98,13 @@ function criarProduto(produto) {
     if (
       produto.image.indexOf("http") === 0
     ) {
+
       imagem.src =
         produto.image;
     }
 
     else {
+
       imagem.src =
         apiBase + produto.image;
     }
@@ -139,7 +146,8 @@ function criarProduto(produto) {
   const botao =
     document.createElement("button");
 
-  botao.type = "button";
+  botao.type =
+    "button";
 
   botao.textContent =
     "+ Adicionar ao Cesto";
@@ -206,11 +214,13 @@ function criarProdutoCesto(
     if (
       produto.image.indexOf("http") === 0
     ) {
+
       imagem.src =
         produto.image;
     }
 
     else {
+
       imagem.src =
         apiBase + produto.image;
     }
@@ -283,7 +293,13 @@ function carregarProdutos() {
     .then(
       (dados) => {
 
-        produtos = dados;
+        console.log(
+          "PRODUTOS DA API:",
+          dados,
+        );
+
+        produtos =
+          dados;
 
         renderizarProdutos(
           produtos,
@@ -295,7 +311,7 @@ function carregarProdutos() {
       (erro) => {
 
         console.log(
-          "Erro:",
+          "Erro nos produtos:",
           erro,
         );
       },
@@ -319,8 +335,25 @@ function carregarCategorias() {
     .then(
       (categorias) => {
 
+        console.log(
+          "CATEGORIAS DA API:",
+          categorias,
+        );
+
+
         categorias.forEach(
           (categoria) => {
+
+            console.log(
+              "CATEGORIA:",
+              categoria,
+            );
+
+            console.log(
+              "NOME DA CATEGORIA:",
+              categoria.name,
+            );
+
 
             const option =
               document.createElement(
@@ -345,7 +378,7 @@ function carregarCategorias() {
       (erro) => {
 
         console.log(
-          "Erro:",
+          "Erro nas categorias:",
           erro,
         );
       },
@@ -362,7 +395,8 @@ function renderizarProdutos(
   listaProdutos,
 ) {
 
-  nodeProdutos.innerHTML = "";
+  nodeProdutos.innerHTML =
+    "";
 
 
   listaProdutos.forEach(
@@ -397,9 +431,9 @@ function atualizarProdutos() {
     nodePesquisa.value;
 
 
-  // FILTRAR POR CATEGORIA
-
-  if (categoria !== "") {
+  if (
+    categoria !== ""
+  ) {
 
     lista =
       lista.filter(
@@ -410,9 +444,9 @@ function atualizarProdutos() {
   }
 
 
-  // PESQUISAR PELO NOME
-
-  if (pesquisa !== "") {
+  if (
+    pesquisa !== ""
+  ) {
 
     lista =
       lista.filter(
@@ -423,8 +457,6 @@ function atualizarProdutos() {
       );
   }
 
-
-  // ORDENAR PREÇO CRESCENTE
 
   if (
     ordem ===
@@ -441,8 +473,6 @@ function atualizarProdutos() {
     );
   }
 
-
-  // ORDENAR PREÇO DECRESCENTE
 
   if (
     ordem ===
@@ -473,9 +503,11 @@ function atualizaCesto() {
   const cesto =
     obterCesto();
 
-  nodeCesto.innerHTML = "";
+  nodeCesto.innerHTML =
+    "";
 
-  let total = 0;
+  let total =
+    0;
 
 
   cesto.forEach(
@@ -507,7 +539,7 @@ function atualizaCesto() {
 }
 
 
-// COMPRAR
+// CHECKOUT
 
 function comprar() {
 
@@ -515,7 +547,8 @@ function comprar() {
     obterCesto();
 
 
-  const produtosCompra = [];
+  const produtosCompra =
+    [];
 
 
   cesto.forEach(
@@ -540,7 +573,8 @@ function comprar() {
     coupon:
       nodeCupao.value,
 
-    name: "",
+    name:
+      "",
   };
 
 
@@ -548,7 +582,8 @@ function comprar() {
     apiBase + "/buy",
     {
 
-      method: "POST",
+      method:
+        "POST",
 
       headers: {
         "Content-Type":
@@ -570,7 +605,9 @@ function comprar() {
     .then(
       (dados) => {
 
-        if (dados.error) {
+        if (
+          dados.error
+        ) {
 
           console.log(
             "Erro:",
@@ -609,7 +646,6 @@ function comprar() {
 
 // D. Event Listeners
 
-
 nodeFiltro.addEventListener(
   "change",
   atualizarProdutos,
@@ -634,14 +670,7 @@ nodeComprar.addEventListener(
 );
 
 
-// Os event listeners para adicionar
-// e remover produtos são criados
-// dentro das funções criarProduto()
-// e criarProdutoCesto().
-
-
 // E. Inicialização
-
 
 if (
   localStorage.getItem(
